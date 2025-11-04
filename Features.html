@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/features.css">
+</head>
+<body>
+    
+    
+    
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  
+  const btn = document.getElementById("unlockbtn");
+  if (btn) {
+    btn.addEventListener("click", function () {
+      window.open("special_feature.html", "_blank", "noopener,noreferrer");
+    });
+  }
+
+  const learnButtons = document.querySelectorAll(".icon .learn-btn, .icon input[type='button'], .icon button");
+  learnButtons.forEach(button => {
+    button.addEventListener("click", () => {
+    
+      const icon = button.closest('.icon');
+      if (!icon) return;
+      const card = icon.querySelector('.info-card');
+      if (!card) return;
+      card.classList.toggle('show');
+
+      
+    });
+  });
+
+  
+  document.addEventListener('click', (e) => {
+
+    const insideIcon = e.target.closest('.icon');
+    if (!insideIcon) {
+      document.querySelectorAll('.info-card.show').forEach(c => c.classList.remove('show'));
+    }
+  });
+
+});
+</script>
+
+    
+    
+    <nav>
+      <div id="navbar">
+        
+         
+          <a href="home.html">Home</a>
+          <a href="about_uss.html">about us</a>
+          <a href="contact_us.html">contact us</a>
+          <a href="login.html" >sign in/ login</a>
+          <a href="special_feature.html">Special feature</a>
+        
+      </div>
+    </nav>
+    <h1 id="core_features">OUR CORE HIGHLIGHTS</h1>
+    <div id="background_img">
+    <div id="icon-container">
+        <div class="icon">
+            <figure>
+                <img src="images/aieye.png" alt="VisionAi Watchtower" class="rotate">
+                <figcaption>VisionAi Watchtower</figcaption>
+            </figure>
+            <input type="button" value="Learn more" class="learn-button">
+            <div class="info-card">
+                Independent Functionality:
+                An AI-powered surveillance and anomaly detection network that continuously monitors urban spaces through adaptive smart cameras. It identifies unusual crowd behaviors, unattended objects, and potential threats using visual pattern analysis.<br><br>
+
+                Incident Response:
+                Instantly sends real-time alerts to the control center and other connected systems (like SafePath and CivicPulse) for immediate action. During emergencies, it triggers area lockdown alerts, power rerouting via Smart Grid, and navigation redirection for citizens.
+            </div>
+        </div>
+
+        <div class="icon">
+            <figure>
+                <img src="images/network_grid.png" alt="Smart Response Grid" class="rotate">
+                <figcaption>Smart Response Grid</figcaption>
+            </figure>
+            <input type="button" value="Learn more" class="learn-button">
+            <div class="info-card">
+                Independent Functionality:
+                Acts as both the power lifeline and the data coordination core of City Guard+. It ensures uninterrupted operation of all connected systems through microgrid switching and renewable backups.
+                It also synchronizes data between modules, maintains uptime, and presents live operational analytics on a unified dashboard.<br><br>
+
+                Incident Response:
+                During power outages or system stress, Smart Grid instantly redirects power to priority units (cameras, sensors, servers). It bridges communication between Vision Watch Tower, CrowdQ, and SafePath, ensuring every module receives real-time updates for coordinated response.
+            </div>
+        </div>
+
+        <div class="icon">
+            <figure>
+                <img src="images/navigation_pin.png" alt="SafePath Navigator" class="rotate">
+                <figcaption>SafePath Navigator</figcaption>
+            </figure>
+            <input type="button" value="Learn more" class="learn-button">
+            <div class="info-card">
+                Independent Functionality:
+                Provides citizens with safe, optimized routes during daily travel, large gatherings, or emergencies using live environmental and traffic data.
+                Continuously updates paths based on congestion, crowd density, and alerts from Vision Watch Tower and CrowdQ.<br><br>
+
+                Incident Response:
+                Automatically re-routes users away from unsafe zones detected by the system. Provides personalized alerts and alternate safe passages to emergency exits or medical centers.
+            </div>
+        </div>
+
+        <div class="icon">
+            <figure>
+                <img src="images/chat.png" alt="Crowdq System" class="rotate">
+                <figcaption>crowdQ System</figcaption>
+            </figure>
+            <input type="button" value="Learn more" class="learn-button">
+            <div class="info-card">
+                Independent Functionality:
+                A real-time crowd management and flow optimization engine. Uses sensor data and predictive analytics to regulate entry and exit points, reduce congestion, and guide movement in large events, stations, or malls.<br><br>
+
+                Incident Response:
+                In case of panic or uneven crowd movement detected by Vision Watch Tower, CrowdQ dynamically redirects human flow using smart displays or audio cues, helping to prevent stampedes and maintain safety.
+            </div>
+        </div>
+
+        
+
+        <div class="icon">
+            <figure>
+                <img src="images/civicplusocnnect.png" alt="Accessibility" class="rotate" >
+                <figcaption>CivicPulse Connect</figcaption>
+            </figure>
+            <input type="button" value="Learn more" class="learn-button">
+            <div class="info-card">
+                Independent Functionality:
+                A two-way communication interface between citizens and authorities. It allows reporting of civic issues, feedback, and receiving updates or warnings directly on their devices.
+                Integrates with other modules to gather verified data on real-time conditions.<br><br>
+
+                Incident Response:
+                Disseminates instant emergency broadcasts (alerts, safety instructions, evacuation guides) and gathers on-ground feedback for improved decision-making
+            </div>
+        </div>
+
+        <div class="icon">
+            <figure>
+                <img src="images/security_access+.png" alt="InclusiveAccess+" height="500px" width="450px" class="rotate">
+                <figcaption>InclusiveAccess+</figcaption>
+            </figure>
+            <input type="button" value="Learn more" class="learn-button">
+            <div class="info-card">
+                Independent Functionality:
+                A dedicated accessibility and support module ensuring that elderly, differently-abled, or visually/hearing-impaired individuals receive tailored navigation and safety guidance.
+                Offers voice directions, tactile notifications, and screen-readable alerts.<br><br>
+
+                    Incident Response:
+                Provides specialized assistance routes during emergencies, automatic SOS triggers, and personalized help notifications based on user profile and location.
+            </div>
+        </div>
+    </div>
+</div>
+
+    <h1>KEY FEATURES</h1>
+        <div id="special_features">
+            <img src="images/lock.avif" alt="special features" >
+            <button id="unlockbtn" type="button">Unlock Access</button>
+        </div>
+    
+
+</body>
+</html>

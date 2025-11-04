@@ -1,0 +1,92 @@
+#navbar{
+    display:flex;
+    text-align: center;
+    justify-content: space-between;
+    background-color:  rgba(0, 38, 77, 0.7);
+    border-radius: 20px;
+    border-style: solid white;
+
+
+}
+#navbar ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+    padding: 180px  ;
+    
+
+
+}
+#navbar ul{
+    display:flex;
+    text-decoration: none;
+    gap:30px;
+    justify-content: center;
+    list-style: none;
+    
+}
+body background{
+    background-image: url("images/home background image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin:5px;
+
+}
+#container{
+    position:absolute;
+    top:70%;
+    left:50%;
+}
+button{
+    border-radius: 35px;
+    border-style: solid black;
+    height:85px;
+    width:160px;
+    gap:50px;
+    margin:45px;
+
+}
+#button1{
+    background-color:#08204f;
+    color:white;
+}
+#button1 a{
+    color:white;
+    text-decoration: none;
+}
+#button2{
+    background-color: aliceblue ;
+    color:#0076d4;
+}
+#button2 a{
+    text-decoration: none;
+}
+button:hover{
+    cursor:pointer;
+}
+h1{
+    position: absolute;
+    top:30%;
+    left:20%;
+    font-size:5rem;
+    color: rgba(0, 38, 77, 0.7) ;
+}
+h2{
+    position:absolute;
+    top:45%;
+    left:25%;
+    color:azure
+}
+#logo{
+    border-radius: 50%;
+    display:flex;
+    flex-direction: column;
+    border-style: solid white;
+    position:relative;
+    top:50%;
+    left:20%;
+    height:60px;
+    width:60px;
+
+}

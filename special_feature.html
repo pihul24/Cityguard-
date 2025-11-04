@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/special_features.css">
+</head>
+<body>
+    <nav>
+      <div id="navbar">
+          
+          <a href="home.html">Home</a>
+          <a href="Features.html">Features</a>
+          <a href="contact_us.html">contact us</a>
+          <a href="login.html" >sign in/ login</a>
+          <a href="special_feature.html">Special feature</a>
+        
+      </div>
+    </nav>
+    
+        <div id="main_image">
+            <img src="images/special-feature_main.png" width="1509" height="680">
+        </div>
+        <h1>Discover! </h1>
+        <h2>What's inside</h2>
+    <div id="container">
+        <div class="features">
+            <figure>
+                <img src="images/personalised-ai.png">
+                    <!-- <button>What's inside</button> -->
+                <figcaption>Personalised AI Planner</figcaption>
+            </figure>
+            <button>What's inside</button>
+            <div class="info-card">
+                An intelligent assistant that learns user routines and travel patterns to plan safer, smarter days. It analyses live city data, crowd density, and past incidents to suggest the safest routes, timings, and check-ins.
+                <br><br><b><i><u>Benefits:</u></i></b>
+                Reduces exposure to high-risk zones, sends proactive alerts before danger, and builds personalized safety plans that adapt to user behavior. 
+                        <button>Activate special mode</button>
+            </div>
+        </div>
+
+        <div class="features">
+            <figure>
+                <img src="images/watch_integrated.png">
+                <figcaption>Integrated Wearable Alert</figcaption>
+                <!-- <button>What's inside</button> -->
+            </figure>
+            <button>What's inside</button>
+            <div class="info-card">
+                Seamlessly connects with smartwatches or fitness bands to enable instant SOS activation. A single tap or gesture sends the user’s live location and distress signal to emergency responders and trusted contacts through the Smart Response Grid.
+                <br><br><b><i><u>Benefits:</u></i></b>
+                Ensures immediate help even when the phone is out of reach, shortens emergency response time, and enhances personal security on the go.
+                            <button> Activate special mode</button>
+            </div>
+        </div>
+
+
+        <div class="features">
+            <figure>
+                <img src="images/smart_city_alert.png">
+                <figcaption>Smart City Alert</figcaption>
+                <!-- <button>What's inside</button> -->
+            </figure>
+            <button>What's inside</button>
+            <div class="info-card">
+                A real-time alert network that delivers verified city-wide safety updates — like accidents, hazards, or civic emergencies — directly from VisionAI, sensors, and local authorities.
+                <br><br><b><i><u>Benefits:</u></i></b>
+                Keeps citizens informed, supports faster decision-making, prevents exposure to danger zones, and builds trust through accurate, verified updates.
+                        <button id="inlockbtn">Activate special mode</button>
+            </div>
+        </div>
+    </div>
+
+               <!-- javascript code -->
+        <script>
+            const buttons = document.querySelectorAll(".features button")
+            buttons.forEach(button =>{
+                button.addEventListener('click',()=>{
+                    const card=button.parentElement.querySelector('.info-card');
+                    card.classList.toggle('show');
+                });
+            });
+
+           document.addEventListener('click', (e) => {
+            if (!e.target.closest('.info-card') && !e.target.closest('.features button')) {
+             document.querySelectorAll('.info-card.show').forEach(c => c.classList.remove('show'));
+         }
+    });
+
+            // for pop up winodw for user
+
+            document.querySelectorAll('.info-card button').forEach(button=>{
+                button.addEventListener('click',(event)=> {
+                    event.stopPropagation();
+                    const userchoice=confirm("You need to register first to activate special feature\n\n Press ok to register and cancel to go back");
+                    if(userchoice){
+                        window.location.href="Registeration_page.html";
+                    }
+
+
+                
+                });
+            });
+        </script>
+
+</body>
+</html>
